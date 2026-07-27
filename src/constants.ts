@@ -114,29 +114,44 @@ export const DIFFERENTIALS = [
 // High quality vehicle accident images & split-screen pristine car
 export const DAMAGED_CARS = [
   {
+    id: "perda_total",
     url: "https://img.supremasite.com.br/perda-total-100fipe.webp",
     label: "Perda total",
     cost: "100% da FIPE",
+    description: "Em uma colisão grave, roubo ou desastre natural onde o conserto supera 75% do valor do veículo, você perde seu patrimônio de uma hora para outra. Sem seguro, o prejuízo pode passar de R$ 30.000 ou R$ 50.000. Com o Seguro Loovi, você recebe até 100% da Tabela FIPE sem burocracia nem análise de perfil do condutor! Garanta a proteção do seu bolso agora mesmo.",
+    whatsappMsg: "Olá Bárbara! Vi o card de Perda Total no site e gostaria de fazer uma cotação para o meu veículo.",
   },
   {
+    id: "guincho_hotel",
     url: "https://img.supremasite.com.br/guincho+hotel.webp",
     label: "Guincho + hotel",
     cost: "Socorro 24h",
+    description: "Ficar parado na rodovia de madrugada por pane mecânica, elétrica ou acidente é assustador. Um guincho particular a mais de 100km pode custar mais de R$ 800, sem contar estadia. Com a Loovi, você conta com Assistência 24h em todo o Brasil (0800 nacional), guincho sem limite de Km conforme o plano, hotel para até 5 pessoas, chaveiro e auxílio em pane seca!",
+    whatsappMsg: "Olá Bárbara! Quero saber mais sobre a Assistência 24h com Guincho e Hotel da Loovi para o meu carro.",
   },
   {
+    id: "vidros_farois",
     url: "https://img.supremasite.com.br/vidros-farois.webp",
     label: "Vidros e faróis",
     cost: "Proteção de faróis e lanternas",
+    description: "Uma simples pedra lançada na estrada pode trincar seu para-brisa. Em veículos modernos, a troca com sensores e calibração passa de R$ 2.500. Na Loovi, a cobertura completa de vidros inclui para-brisa, vidros laterais, traseiro, retrovisores, faróis e lanternas com reposição rápida e sem dores de cabeça.",
+    whatsappMsg: "Olá Bárbara! Gostaria de cotar o seguro Loovi com proteção completa para Vidros, Faróis e Lanterna.",
   },
   {
+    id: "carro_reserva",
     url: "https://img.supremasite.com.br/carro-reserva.webp",
     label: "Carro reserva",
     cost: "7 ou 15 dias",
+    description: "Se o seu veículo precisar ir para a oficina após um imprevisto, como você vai trabalhar, levar os filhos na escola ou fazer suas entregas? Alugar um carro particular custa mais de R$ 180 por dia. Com a opção de Carro Reserva Loovi (7 ou 15 dias), você continua rodando sem interromper sua rotina.",
+    whatsappMsg: "Olá Bárbara! Preciso de um seguro com Carro Reserva. Pode fazer uma simulação sem compromisso?",
   },
   {
+    id: "danos_terceiros",
     url: "https://img.supremasite.com.br/danos-a-terceiros.webp",
     label: "Danos a terceiros",
     cost: "até R$ 100.000",
+    description: "Se você encostar na traseira de um carro importado ou SUV de luxo, a conta do conserto do outro veículo pode ultrapassar R$ 50.000 facilmente. Sem seguro, você terá que pagar tudo do próprio bolso ou responder na justiça. A cobertura para terceiros da Loovi garante até R$ 100.000 para danos materiais e corporais.",
+    whatsappMsg: "Olá Bárbara! Gostaria de cotar o seguro da Loovi com cobertura de até R$ 100 mil para Danos a Terceiros.",
   },
 ];
 
