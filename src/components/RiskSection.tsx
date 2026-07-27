@@ -36,12 +36,12 @@ export function RiskSection() {
               className="neon-glow-card group shadow-xl"
             >
               <div className="neon-glow-card-inner">
-                {/* Image shown 100% uncropped with object-contain matching card background */}
-                <div className="w-full h-56 sm:h-64 lg:h-72 overflow-hidden flex items-center justify-center bg-[#481773] relative p-3">
+                {/* Image filling top section edge-to-edge with no padding */}
+                <div className="w-full h-52 sm:h-60 lg:h-64 overflow-hidden relative">
                   <img
                     src={car.url}
                     alt={car.label}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 
