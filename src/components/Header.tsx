@@ -237,14 +237,26 @@ export function Header() {
               <span>Falar no WhatsApp (Ajuda)</span>
             </a>
 
-            {/* Direct Phone Call */}
-            <a
-              href={`tel:+${CONSULTANT_INFO.phoneRaw}`}
-              className="w-full py-3.5 px-6 rounded-2xl bg-[#6D2DBF] text-white font-bold text-sm text-center border border-white/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
-            >
-              <Phone className="w-4 h-4 text-[#8A4DE8]" />
-              <span>Ligar: {CONSULTANT_INFO.phone}</span>
-            </a>
+            {/* Direct Phone Calls */}
+            <div className="flex flex-col gap-2 pt-1">
+              <span className="text-xs font-extrabold text-[#2ED9A0] uppercase tracking-wider text-center">
+                Atendimento por Ligação (2 Números)
+              </span>
+              <a
+                href={`tel:+${CONSULTANT_INFO.phone1Raw}`}
+                className="w-full py-3.5 px-4 rounded-2xl bg-[#6D2DBF] hover:bg-[#8A4DE8] text-white font-bold text-sm text-center border border-white/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+              >
+                <Phone className="w-4 h-4 text-[#2ED9A0]" />
+                <span>Ligar: {CONSULTANT_INFO.phone1} (PR)</span>
+              </a>
+              <a
+                href={`tel:+${CONSULTANT_INFO.phone2Raw}`}
+                className="w-full py-3.5 px-4 rounded-2xl bg-[#3F1568] hover:bg-[#6D2DBF] text-white font-bold text-sm text-center border border-white/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+              >
+                <Phone className="w-4 h-4 text-[#2ED9A0]" />
+                <span>Ligar: {CONSULTANT_INFO.phone2} (MG)</span>
+              </a>
+            </div>
           </div>
         </div>
       )}

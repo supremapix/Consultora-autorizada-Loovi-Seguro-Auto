@@ -81,13 +81,23 @@ export function Footer() {
                 <span>WhatsApp: {CONSULTANT_INFO.whatsapp}</span>
               </a>
 
-              <a
-                href={`tel:+${CONSULTANT_INFO.phoneRaw}`}
-                className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 border border-white/10 text-white font-bold text-base hover:bg-white/10 transition-all"
-              >
-                <Phone className="w-5 h-5 text-[#8A4DE8] shrink-0" />
-                <span>Ligar: {CONSULTANT_INFO.phone}</span>
-              </a>
+              <div className="space-y-2 pt-1">
+                <p className="text-xs font-bold text-slate-300 uppercase tracking-wider">Ligar para Atendimento:</p>
+                <a
+                  href={`tel:+${CONSULTANT_INFO.phone1Raw}`}
+                  className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 border border-white/10 text-white font-bold text-sm sm:text-base hover:bg-white/10 hover:border-[#2ED9A0] transition-all"
+                >
+                  <Phone className="w-4 h-4 text-[#2ED9A0] shrink-0" />
+                  <span>Ligar: {CONSULTANT_INFO.phone1} (PR)</span>
+                </a>
+                <a
+                  href={`tel:+${CONSULTANT_INFO.phone2Raw}`}
+                  className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 border border-white/10 text-white font-bold text-sm sm:text-base hover:bg-white/10 hover:border-[#8A4DE8] transition-all"
+                >
+                  <Phone className="w-4 h-4 text-[#8A4DE8] shrink-0" />
+                  <span>Ligar: {CONSULTANT_INFO.phone2} (MG)</span>
+                </a>
+              </div>
 
               <p className="text-sm text-slate-300 flex items-center gap-2 pt-1">
                 <Mail className="w-4 h-4 text-slate-400 shrink-0" />

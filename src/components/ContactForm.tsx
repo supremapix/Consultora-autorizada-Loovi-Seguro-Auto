@@ -83,8 +83,8 @@ Mensagem: ${formData.message || 'Desejo receber informações sobre o seguro Loo
 
             <div className="space-y-4 pt-4">
               <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-xl bg-[#2ED9A0]/20 flex items-center justify-center text-[#2ED9A0]">
-                  <Phone className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-xl bg-[#2ED9A0]/20 flex items-center justify-center text-[#2ED9A0] shrink-0">
+                  <MessageCircle className="w-5 h-5 text-[#2ED9A0]" />
                 </div>
                 <div>
                   <span className="text-xs text-slate-400 block font-medium">WhatsApp Direct</span>
@@ -96,6 +96,33 @@ Mensagem: ${formData.message || 'Desejo receber informações sobre o seguro Loo
                   >
                     {CONSULTANT_INFO.whatsapp}
                   </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-[#8A4DE8]/20 flex items-center justify-center text-[#8A4DE8] shrink-0 mt-0.5">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-xs text-slate-400 block font-medium">Atendimento por Telefone / Ligação (2 Números)</span>
+                  <div className="flex flex-col gap-1.5 mt-1.5">
+                    <a
+                      href={`tel:+${CONSULTANT_INFO.phone1Raw}`}
+                      className="font-sora font-bold text-white text-sm sm:text-base hover:text-[#2ED9A0] transition-colors flex items-center gap-2"
+                    >
+                      <span className="w-2 h-2 rounded-full bg-[#2ED9A0]"></span>
+                      <span>{CONSULTANT_INFO.phone1}</span>
+                      <span className="text-xs text-slate-400 font-normal">(Curitiba/PR)</span>
+                    </a>
+                    <a
+                      href={`tel:+${CONSULTANT_INFO.phone2Raw}`}
+                      className="font-sora font-bold text-white text-sm sm:text-base hover:text-[#2ED9A0] transition-colors flex items-center gap-2"
+                    >
+                      <span className="w-2 h-2 rounded-full bg-[#8A4DE8]"></span>
+                      <span>{CONSULTANT_INFO.phone2}</span>
+                      <span className="text-xs text-slate-400 font-normal">(Belo Horizonte/MG)</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
