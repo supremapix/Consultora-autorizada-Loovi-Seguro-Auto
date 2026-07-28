@@ -5,10 +5,10 @@ export function ShareRadial() {
   const [isOpen, setIsOpen] = useState(false);
   const [toastMsg, setToastMsg] = useState('');
 
-  const shareTitle = "Seguro Auto Loovi em Curitiba | Consultora Barbara Duraes";
-  const shareText = "Confira o seguro auto digital sem análise de perfil e com 100% FIPE!";
+  const shareTitle = "Seguro Auto Loovi | Executiva Barbara Durães";
+  const shareText = "Confira o seguro auto digital sem análise de perfil, 100% Tabela FIPE e guincho 24h em todo o Brasil!";
   const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://loovi.com.br';
-  const heroImage = "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80";
+  const shareImage = "https://img.supremasite.com.br/perda-total-100fipe.webp";
 
   const handleNativeShare = async () => {
     if (navigator.share) {
@@ -95,7 +95,7 @@ export function ShareRadial() {
       color: 'bg-[#E60023] hover:bg-[#be001d]',
       action: () =>
         openShareWindow(
-          `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(currentUrl)}&media=${encodeURIComponent(heroImage)}&description=${encodeURIComponent(shareText)}`
+          `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(currentUrl)}&media=${encodeURIComponent(shareImage)}&description=${encodeURIComponent(shareText)}`
         ),
     },
     {
