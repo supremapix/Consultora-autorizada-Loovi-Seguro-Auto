@@ -14,7 +14,7 @@ export function Hero() {
   const MARQUEE_ITEMS = Array(10).fill('tá na Loovi, tá seguro!');
 
   return (
-    <section id="inicio" className="relative min-h-screen pt-[72px] pb-16 lg:pb-24 flex flex-col justify-between overflow-hidden bg-loovi-gradient text-white">
+    <section id="inicio" className="relative pt-[72px] pb-0 flex flex-col justify-between overflow-hidden bg-loovi-gradient text-white">
       {/* Infinite Marquee Bar */}
       <div className="w-full bg-black/15 backdrop-blur-sm py-3 border-b border-white/10 overflow-hidden select-none">
         <div className="animate-marquee-infinite flex items-center gap-8 whitespace-nowrap">
@@ -39,10 +39,10 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="max-w-[1296px] w-full mx-auto px-4 lg:px-6 my-auto pt-12 pb-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="max-w-[1296px] w-full mx-auto px-4 lg:px-6 pt-8 sm:pt-12 pb-0 flex-1 flex flex-col justify-between">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
           {/* Left Column Text & CTAs */}
-          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div className="lg:col-span-6 space-y-6 text-center lg:text-left pt-4 lg:py-12 self-center">
             {/* Main Title */}
             <h1 className="font-['Poppins'] font-bold text-[32px] sm:text-[42px] lg:text-[48px] text-white tracking-[-0.02em] leading-[1.1]">
               Contrate o seguro auto mais barato do Brasil
@@ -54,7 +54,7 @@ export function Hero() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <a
                 href={OFFICIAL_ADHESION_LINK}
                 target="_blank"
@@ -76,13 +76,13 @@ export function Hero() {
           </div>
 
           {/* Right Column Vehicle Image */}
-          <div className="lg:col-span-5 flex justify-center items-center">
-            <div className="relative w-full max-w-lg flex justify-center">
+          <div className="lg:col-span-6 flex justify-center lg:justify-end items-end self-end -mx-4 sm:mx-0 w-[calc(100%+2rem)] sm:w-full">
+            <div className="w-full flex justify-center lg:justify-end items-end">
               <img
                 src="https://img.supremasite.com.br/loovi.webp"
                 alt="Seguro Loovi"
                 referrerPolicy="no-referrer"
-                className="w-full max-w-md lg:max-w-lg h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                className="w-full max-w-full lg:max-w-2xl h-auto object-cover rounded-t-2xl sm:rounded-t-3xl shadow-2xl block mb-0"
               />
             </div>
           </div>
