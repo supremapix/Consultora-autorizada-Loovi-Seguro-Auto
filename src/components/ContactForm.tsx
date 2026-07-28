@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, Send, CheckCircle2, Phone, Mail, MapPin } from 'lucide-react';
+import { MessageCircle, Send, CheckCircle2, Phone, Mail, MapPin, FileText } from 'lucide-react';
 import { CONSULTANT_INFO } from '../constants';
 import { ContactFormData } from '../types';
 
@@ -130,15 +130,24 @@ Mensagem: ${formData.message || 'Desejo receber informações sobre o seguro Loo
 
           {/* Right Column: Fast Contact Form */}
           <div className="lg:col-span-7">
-            <div className="glass-card rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl relative">
+            {/* Form Visual Identification Badge for Seniors */}
+            <div className="text-center lg:text-left mb-4">
+              <div className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-[#FFE600] text-[#131522] font-extrabold text-sm sm:text-base shadow-md border-2 border-black">
+                <FileText className="w-5 h-5 text-black" />
+                <span>📝 FORMULÁRIO DE CONTATO - PREENCHA ABAIXO</span>
+              </div>
+            </div>
+
+            {/* High-Contrast Senior-Friendly Form Container */}
+            <div className="bg-white text-[#131522] rounded-3xl p-6 sm:p-10 border-4 border-[#6D2DBF] shadow-[0_20px_50px_rgba(0,0,0,0.4)] relative">
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <h3 className="font-sora font-bold text-2xl text-white mb-2">
+                  <h3 className="font-sora font-extrabold text-2xl sm:text-3xl text-[#131522] mb-2">
                     Enviar mensagem rápida
                   </h3>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1">
+                    <label className="block text-sm font-extrabold text-[#131522] mb-1.5">
                       Nome completo *
                     </label>
                     <input
@@ -148,15 +157,15 @@ Mensagem: ${formData.message || 'Desejo receber informações sobre o seguro Loo
                         setFormData((prev) => ({ ...prev, name: e.target.value }));
                         setErrors((prev) => ({ ...prev, name: '' }));
                       }}
-                      placeholder="Seu nome"
-                      className="w-full h-12 px-4 rounded-xl bg-white/5 border border-white/15 text-white placeholder-slate-500 font-medium text-sm focus:outline-none focus:border-[#6D2DBF]"
+                      placeholder="Digite seu nome completo"
+                      className="w-full h-14 px-4 rounded-2xl bg-[#F6F5FB] border-2 border-[#2B304C]/40 text-[#131522] placeholder-slate-400 font-bold text-base sm:text-lg focus:outline-none focus:border-[#6D2DBF] focus:bg-white focus:ring-4 focus:ring-[#6D2DBF]/20"
                     />
-                    {errors.name && <p className="text-xs text-[#FF4D4D] mt-1 font-semibold">{errors.name}</p>}
+                    {errors.name && <p className="text-sm text-[#D32F2F] mt-1 font-extrabold">{errors.name}</p>}
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">
+                      <label className="block text-sm font-extrabold text-[#131522] mb-1.5">
                         WhatsApp (com DDD) *
                       </label>
                       <input
@@ -164,15 +173,15 @@ Mensagem: ${formData.message || 'Desejo receber informações sobre o seguro Loo
                         value={formData.whatsapp}
                         onChange={handlePhoneChange}
                         placeholder="(41) 99999-9999"
-                        className="w-full h-12 px-4 rounded-xl bg-white/5 border border-white/15 text-white placeholder-slate-500 font-medium text-sm focus:outline-none focus:border-[#6D2DBF]"
+                        className="w-full h-14 px-4 rounded-2xl bg-[#F6F5FB] border-2 border-[#2B304C]/40 text-[#131522] placeholder-slate-400 font-bold text-base sm:text-lg focus:outline-none focus:border-[#6D2DBF] focus:bg-white focus:ring-4 focus:ring-[#6D2DBF]/20"
                       />
                       {errors.whatsapp && (
-                        <p className="text-xs text-[#FF4D4D] mt-1 font-semibold">{errors.whatsapp}</p>
+                        <p className="text-sm text-[#D32F2F] mt-1 font-extrabold">{errors.whatsapp}</p>
                       )}
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">
+                      <label className="block text-sm font-extrabold text-[#131522] mb-1.5">
                         E-mail (opcional)
                       </label>
                       <input
@@ -183,47 +192,47 @@ Mensagem: ${formData.message || 'Desejo receber informações sobre o seguro Loo
                           setErrors((prev) => ({ ...prev, email: '' }));
                         }}
                         placeholder="seu@email.com"
-                        className="w-full h-12 px-4 rounded-xl bg-white/5 border border-white/15 text-white placeholder-slate-500 font-medium text-sm focus:outline-none focus:border-[#6D2DBF]"
+                        className="w-full h-14 px-4 rounded-2xl bg-[#F6F5FB] border-2 border-[#2B304C]/40 text-[#131522] placeholder-slate-400 font-bold text-base sm:text-lg focus:outline-none focus:border-[#6D2DBF] focus:bg-white focus:ring-4 focus:ring-[#6D2DBF]/20"
                       />
-                      {errors.email && <p className="text-xs text-[#FF4D4D] mt-1 font-semibold">{errors.email}</p>}
+                      {errors.email && <p className="text-sm text-[#D32F2F] mt-1 font-extrabold">{errors.email}</p>}
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1">
+                    <label className="block text-sm font-extrabold text-[#131522] mb-1.5">
                       Sua mensagem ou dúvida
                     </label>
                     <textarea
                       rows={3}
                       value={formData.message}
                       onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
-                      placeholder="Olá Barbara, gostaria de saber mais sobre..."
-                      className="w-full p-4 rounded-xl bg-white/5 border border-white/15 text-white placeholder-slate-500 font-medium text-sm focus:outline-none focus:border-[#6D2DBF] resize-none"
+                      placeholder="Olá Bárbara, gostaria de tirar uma dúvida..."
+                      className="w-full p-4 rounded-2xl bg-[#F6F5FB] border-2 border-[#2B304C]/40 text-[#131522] placeholder-slate-400 font-bold text-base sm:text-lg focus:outline-none focus:border-[#6D2DBF] focus:bg-white focus:ring-4 focus:ring-[#6D2DBF]/20 resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="shine-effect w-full h-14 rounded-full bg-loovi-gradient text-white font-sora font-bold text-base shadow-xl shadow-[#481773]/40 hover:scale-[1.01] transition-all flex items-center justify-center gap-2"
+                    className="w-full h-16 rounded-2xl bg-[#2ED9A0] hover:bg-[#25b886] text-[#0B0B18] font-sora font-extrabold text-lg sm:text-xl shadow-xl transition-all hover:scale-[1.01] flex items-center justify-center gap-3 border-2 border-emerald-600 cursor-pointer"
                   >
-                    <Send className="w-5 h-5 text-white" />
-                    Enviar no WhatsApp
+                    <Send className="w-6 h-6 text-[#0B0B18]" />
+                    <span>ENVIAR FORMULÁRIO NO WHATSAPP</span>
                   </button>
                 </form>
               ) : (
                 <div className="py-8 text-center space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-[#2ED9A0]/20 text-[#2ED9A0] flex items-center justify-center mx-auto">
+                  <div className="w-16 h-16 rounded-full bg-[#2ED9A0]/20 text-[#2ED9A0] border-2 border-[#2ED9A0] flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="font-sora font-bold text-2xl text-white">
-                    Mensagem enviada!
+                  <h3 className="font-sora font-extrabold text-2xl sm:text-3xl text-[#131522]">
+                    Mensagem enviada com sucesso!
                   </h3>
-                  <p className="text-sm text-slate-300">
-                    Sua conversa foi iniciada no WhatsApp. A consultora Barbara responderá em instantes.
+                  <p className="text-base text-slate-700 font-medium">
+                    Sua conversa foi iniciada no WhatsApp. A executiva Bárbara Durães responderá em instantes.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="px-6 py-2 rounded-full bg-white/10 hover:bg-white/20 text-xs font-semibold text-white transition-colors"
+                    className="px-6 py-3 rounded-2xl bg-[#6D2DBF] hover:bg-[#3F1568] text-sm font-extrabold text-white transition-colors"
                   >
                     Enviar outra mensagem
                   </button>
