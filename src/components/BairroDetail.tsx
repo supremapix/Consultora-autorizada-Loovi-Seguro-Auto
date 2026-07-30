@@ -5,6 +5,7 @@ import { CONSULTANT_INFO, OFFICIAL_ADHESION_LINK } from '../constants';
 import { getInsuranceAgencySchema, getBreadcrumbSchema, getFaqSchema, getServiceSchema } from '../data/seoSchemas';
 import { ShieldCheck, MapPin, Phone, MessageCircle, Clock, Navigation, CheckCircle2, ArrowRight, Car, HelpCircle, FileText } from 'lucide-react';
 import { QuizCotacao } from './QuizCotacao';
+import { HomeImagesShowcase } from './HomeImagesShowcase';
 
 interface Props {
   bairro: BairroInfo;
@@ -249,6 +250,14 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
           </div>
         </div>
       </section>
+
+      {/* Showcase de Imagens da Home */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <HomeImagesShowcase
+          title={`Galeria de Imagens e Coberturas no Bairro ${bairro.name}`}
+          subtitle={`Veja como a Loovi protege seu carro com assistência 24h, rastreador e indenização integral em ${bairro.name}.`}
+        />
+      </div>
 
       {/* Interactive Quiz / Cotacao */}
       <section className="py-12 bg-[#0B0D17]">

@@ -4,6 +4,7 @@ import { BlogPost } from '../data/blogData';
 import { CONSULTANT_INFO, OFFICIAL_ADHESION_LINK } from '../constants';
 import { getArticleSchema, getBreadcrumbSchema } from '../data/seoSchemas';
 import { Clock, UserCheck, Calendar, ArrowLeft, MessageCircle, ArrowRight } from 'lucide-react';
+import { HomeImagesShowcase } from './HomeImagesShowcase';
 
 interface Props {
   post: BlogPost;
@@ -121,6 +122,14 @@ export const BlogPostDetail: React.FC<Props> = ({ post, onNavigate }) => {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Home Images Showcase */}
+        <div className="mt-8">
+          <HomeImagesShowcase
+            title="Conheça a Proteção Loovi em Imagens"
+            subtitle="Veja as coberturas 100% FIPE, socorro guincho e serviços inclusos na sua assinatura Loovi."
+          />
         </div>
       </article>
     </div>

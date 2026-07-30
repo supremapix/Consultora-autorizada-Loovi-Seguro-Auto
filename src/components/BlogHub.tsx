@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BLOG_POSTS } from '../data/blogData';
 import { BookOpen, Search, Clock, ArrowRight, UserCheck } from 'lucide-react';
+import { HomeImagesShowcase } from './HomeImagesShowcase';
 
 interface Props {
   onNavigate: (path: string) => void;
@@ -121,6 +122,12 @@ export const BlogHub: React.FC<Props> = ({ onNavigate }) => {
             </div>
           ))}
         </div>
+
+        {/* Home Images Showcase */}
+        <HomeImagesShowcase
+          title="Galeria Ilustrada do Seguro Loovi"
+          subtitle="Acompanhe na prática como funciona a proteção para seu veículo em Curitiba e Região."
+        />
       </section>
     </div>
   );

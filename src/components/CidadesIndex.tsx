@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CIDADES_METROPOLITANAS } from '../data/cidadesData';
 import { MapPin, Search, ArrowRight, ShieldCheck, Clock, Navigation } from 'lucide-react';
+import { HomeImagesShowcase } from './HomeImagesShowcase';
 
 interface Props {
   onNavigate: (path: string) => void;
@@ -107,6 +108,12 @@ export const CidadesIndex: React.FC<Props> = ({ onNavigate }) => {
             </div>
           ))}
         </div>
+
+        {/* Home Images Showcase */}
+        <HomeImagesShowcase
+          title="Galeria Visual da Proteção Loovi na Região Metropolitana"
+          subtitle="Confira o socorro rápido em rodovias, coberturas contra roubo e desastres e assistência 24h para as 15 cidades da RMC."
+        />
       </section>
     </div>
   );

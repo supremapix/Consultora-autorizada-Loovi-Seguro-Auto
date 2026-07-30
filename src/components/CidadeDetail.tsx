@@ -5,6 +5,7 @@ import { CONSULTANT_INFO, OFFICIAL_ADHESION_LINK } from '../constants';
 import { getInsuranceAgencySchema, getBreadcrumbSchema, getFaqSchema, getServiceSchema } from '../data/seoSchemas';
 import { MapPin, Phone, MessageCircle, Clock, ShieldCheck, ArrowRight, HelpCircle, Navigation, CheckCircle2 } from 'lucide-react';
 import { QuizCotacao } from './QuizCotacao';
+import { HomeImagesShowcase } from './HomeImagesShowcase';
 
 interface Props {
   cidade: CidadeInfo;
@@ -181,6 +182,14 @@ export const CidadeDetail: React.FC<Props> = ({ cidade, onNavigate }) => {
           </div>
         </div>
       </section>
+
+      {/* Showcase de Imagens da Home */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <HomeImagesShowcase
+          title={`Galeria de Imagens e Coberturas em ${cidade.name}`}
+          subtitle={`Veja como a Loovi protege motoristas em ${cidade.name} e toda a Região Metropolitana de Curitiba.`}
+        />
+      </div>
 
       <section className="py-12 bg-[#0B0D17]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

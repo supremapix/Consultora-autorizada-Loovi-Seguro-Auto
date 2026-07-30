@@ -5,6 +5,7 @@ import { CONSULTANT_INFO, OFFICIAL_ADHESION_LINK } from '../constants';
 import { getInsuranceAgencySchema, getBreadcrumbSchema, getServiceSchema } from '../data/seoSchemas';
 import { MapPin, Phone, MessageCircle, Clock, ShieldCheck, ArrowRight, HelpCircle } from 'lucide-react';
 import { QuizCotacao } from './QuizCotacao';
+import { HomeImagesShowcase } from './HomeImagesShowcase';
 
 interface Props {
   regiao: RegiaoInfo;
@@ -173,6 +174,14 @@ export const RegiaoDetail: React.FC<Props> = ({ regiao, onNavigate }) => {
           </div>
         </div>
       </section>
+
+      {/* Showcase de Imagens da Home */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <HomeImagesShowcase
+          title={`Galeria de Imagens e Coberturas na ${regiao.name}`}
+          subtitle={`Acompanhe em fotos o socorro 24h, coberturas e tecnologia Loovi para quem mora na ${regiao.name}.`}
+        />
+      </div>
 
       <section className="py-12 bg-[#0B0D17]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { BAIRROS_CURITIBA } from '../data/bairrosData';
 import { REGIOES_POPULARES } from '../data/regioesData';
 import { MapPin, Search, ArrowRight, ShieldCheck, Clock } from 'lucide-react';
+import { HomeImagesShowcase } from './HomeImagesShowcase';
 
 interface Props {
   onNavigate: (path: string) => void;
@@ -150,6 +151,12 @@ export const BairrosIndex: React.FC<Props> = ({ onNavigate }) => {
             </div>
           </div>
         )}
+
+        {/* Home Images Showcase */}
+        <HomeImagesShowcase
+          title="Galeria Visual da Proteção Loovi em Curitiba"
+          subtitle="Explore todas as coberturas e a frota de guinchos e assistências disponíveis para os 75 bairros de Curitiba."
+        />
       </section>
     </div>
   );

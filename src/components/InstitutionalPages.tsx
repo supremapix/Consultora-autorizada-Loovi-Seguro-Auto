@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { CONSULTANT_INFO, LOOVI_CHANNELS, COVERAGES, FAQ_ITEMS, OFFICIAL_ADHESION_LINK } from '../constants';
 import { ShieldCheck, Phone, Mail, MapPin, CheckCircle2, MessageCircle, HelpCircle, FileText, ArrowRight } from 'lucide-react';
 import { QuizCotacao } from './QuizCotacao';
+import { HomeImagesShowcase } from './HomeImagesShowcase';
 
 interface Props {
   pageType: 'sobre' | 'faq' | 'coberturas' | 'seguro-app-uber' | 'privacidade' | 'termos';
@@ -186,6 +187,11 @@ export const InstitutionalPages: React.FC<Props> = ({ pageType, onNavigate }) =>
               Simular pelo WhatsApp
             </a>
           </div>
+
+          <HomeImagesShowcase
+            title="Galeria das Coberturas Loovi"
+            subtitle="Confira detalhadamente cada item de cobertura com fotos reais dos sinistros e benefícios atendidos."
+          />
         </section>
       </div>
     );
@@ -246,6 +252,10 @@ export const InstitutionalPages: React.FC<Props> = ({ pageType, onNavigate }) =>
         </section>
 
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <HomeImagesShowcase
+            title="Galeria da Proteção Loovi para Uber e 99"
+            subtitle="Conheça a estrutura de socorro e garantias de 100% da Tabela FIPE para motoristas parceiros."
+          />
           <QuizCotacao />
         </section>
       </div>
