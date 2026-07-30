@@ -16,4 +16,7 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://loovi-barbara-duraes.com.br/sitemap.xml
