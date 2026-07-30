@@ -116,7 +116,7 @@ export default function App() {
 
   return (
     <HelmetProvider>
-      <div className="min-h-screen bg-[#0B0D17] text-white flex flex-col font-sans selection:bg-[#2ED9A0] selection:text-[#0B0D17] overflow-x-hidden">
+      <div className="min-h-screen bg-white text-slate-900 flex flex-col font-sans selection:bg-[#2ED9A0] selection:text-slate-950 overflow-x-hidden">
         {currentPath === '/' && <SEOHead />}
         <Header onNavigate={navigateTo} currentPath={currentPath} />
         {renderContent()}

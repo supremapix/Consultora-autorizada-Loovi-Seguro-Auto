@@ -27,7 +27,7 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
   const whatsappLink = `https://wa.me/${CONSULTANT_INFO.whatsappRaw}?text=${whatsappMessage}`;
 
   return (
-    <div className="bg-[#0B0D17] text-white min-h-screen pt-24 pb-16">
+    <div className="bg-white text-slate-900 min-h-screen pt-24 pb-16">
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
@@ -45,53 +45,53 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
       </Helmet>
 
       {/* Breadcrumb Navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-xs sm:text-sm text-slate-400 flex items-center gap-2 flex-wrap">
-        <button onClick={() => onNavigate('/')} className="hover:text-[#2ED9A0] transition-colors">Início</button>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-xs sm:text-sm text-slate-600 flex items-center gap-2 flex-wrap">
+        <button onClick={() => onNavigate('/')} className="hover:text-[#6D2DBF] font-medium transition-colors">Início</button>
         <span>/</span>
-        <button onClick={() => onNavigate('/bairros-curitiba')} className="hover:text-[#2ED9A0] transition-colors">Bairros de Curitiba</button>
+        <button onClick={() => onNavigate('/bairros-curitiba')} className="hover:text-[#6D2DBF] font-medium transition-colors">Bairros de Curitiba</button>
         <span>/</span>
-        <span className="text-[#2ED9A0] font-semibold">{bairro.name}</span>
+        <span className="text-[#6D2DBF] font-bold">{bairro.name}</span>
       </div>
 
       {/* Hero Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-        <div className="bg-gradient-to-br from-[#181C30] via-[#131626] to-[#0D0F1B] border border-white/10 rounded-3xl p-6 sm:p-10 relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#8A4DE8]/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="bg-gradient-to-br from-purple-900 via-[#481773] to-[#6D2DBF] border border-purple-200 rounded-3xl p-6 sm:p-10 relative overflow-hidden shadow-xl text-white">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
 
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2ED9A0]/15 border border-[#2ED9A0]/30 text-[#2ED9A0] text-xs font-bold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2ED9A0] text-slate-950 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
             <MapPin className="w-3.5 h-3.5" />
             <span>Zona {bairro.zone} de Curitiba • Atendimento Local</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold font-sora text-white tracking-tight leading-tight mb-4">
-            Seguro Auto Loovi em <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2ED9A0] to-[#8A4DE8]">{bairro.name}</span>
+            Seguro Auto Loovi em <span className="text-[#2ED9A0]">{bairro.name}</span>
           </h1>
 
-          <p className="text-slate-300 text-base sm:text-xl leading-relaxed max-w-3xl mb-8">
+          <p className="text-slate-100 text-base sm:text-xl leading-relaxed max-w-3xl mb-8 font-medium">
             {bairro.description}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 mb-8">
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3">
+            <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center gap-3">
               <Clock className="w-8 h-8 text-[#2ED9A0] shrink-0" />
               <div>
-                <span className="text-xs text-slate-400 block">Atendimento Guincho</span>
+                <span className="text-xs text-slate-200 block font-medium">Atendimento Guincho</span>
                 <span className="text-sm font-bold text-white">~{bairro.avgArrivalMinutes} min no {bairro.name}</span>
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3">
-              <ShieldCheck className="w-8 h-8 text-[#8A4DE8] shrink-0" />
+            <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center gap-3">
+              <ShieldCheck className="w-8 h-8 text-[#2ED9A0] shrink-0" />
               <div>
-                <span className="text-xs text-slate-400 block">Indenização FIPE</span>
+                <span className="text-xs text-slate-200 block font-medium">Indenização FIPE</span>
                 <span className="text-sm font-bold text-white">100% da Tabela FIPE</span>
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3">
+            <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center gap-3">
               <Car className="w-8 h-8 text-[#2ED9A0] shrink-0" />
               <div>
-                <span className="text-xs text-slate-400 block">Perfil do Condutor</span>
+                <span className="text-xs text-slate-200 block font-medium">Perfil do Condutor</span>
                 <span className="text-sm font-bold text-white">Sem Análise de Perfil</span>
               </div>
             </div>
@@ -102,7 +102,7 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-2xl bg-[#2ED9A0] hover:bg-[#25B886] text-[#0B0D17] font-extrabold text-base transition-all transform hover:-translate-y-0.5 shadow-lg flex items-center justify-center gap-3"
+              className="px-8 py-4 rounded-2xl bg-[#2ED9A0] hover:bg-[#25B886] text-slate-950 font-extrabold text-base transition-all transform hover:-translate-y-0.5 shadow-md flex items-center justify-center gap-3"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Cotar via WhatsApp em {bairro.name}</span>
@@ -112,7 +112,7 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
               href={OFFICIAL_ADHESION_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-2xl bg-[#6D2DBF] hover:bg-[#8A4DE8] text-white font-bold text-base transition-all flex items-center justify-center gap-3 border border-white/20"
+              className="px-8 py-4 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-bold text-base transition-all flex items-center justify-center gap-3 border border-white/30 backdrop-blur-sm"
             >
               <span>Contratar Direto Online</span>
               <ArrowRight className="w-5 h-5" />
@@ -124,22 +124,22 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
       {/* Main Context Details */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-8">
-          <div className="bg-[#131626] border border-white/10 rounded-3xl p-6 sm:p-8">
-            <h2 className="text-2xl font-bold font-sora text-white mb-4 flex items-center gap-3">
-              <Navigation className="w-6 h-6 text-[#2ED9A0]" />
+          <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+            <h2 className="text-2xl font-bold font-sora text-slate-900 mb-4 flex items-center gap-3">
+              <Navigation className="w-6 h-6 text-[#00875A]" />
               Vias e Pontos de Referência Atendidos no {bairro.name}
             </h2>
-            <p className="text-slate-300 leading-relaxed mb-6">
+            <p className="text-slate-700 leading-relaxed mb-6 font-medium">
               Nossa equipe credenciada de reboque, chaveiro, pane elétrica e recarga de bateria atende rapidamente todas as avenidas e ruas do bairro {bairro.name}, com cobertura total para residências, condomínios e comércios locais.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-xs font-extrabold uppercase text-[#2ED9A0] tracking-wider mb-3">Principais Avenidas & Vias</h3>
+                <h3 className="text-xs font-extrabold uppercase text-[#00875A] tracking-wider mb-3">Principais Avenidas & Vias</h3>
                 <ul className="space-y-2">
                   {bairro.mainAvenues.map((av, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm text-slate-200">
-                      <CheckCircle2 className="w-4 h-4 text-[#2ED9A0] shrink-0" />
+                    <li key={idx} className="flex items-center gap-2 text-sm text-slate-800 font-medium">
+                      <CheckCircle2 className="w-4 h-4 text-[#00875A] shrink-0" />
                       <span>{av}</span>
                     </li>
                   ))}
@@ -147,11 +147,11 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
               </div>
 
               <div>
-                <h3 className="text-xs font-extrabold uppercase text-[#8A4DE8] tracking-wider mb-3">Pontos de Referência</h3>
+                <h3 className="text-xs font-extrabold uppercase text-[#6D2DBF] tracking-wider mb-3">Pontos de Referência</h3>
                 <ul className="space-y-2">
                   {bairro.landmarks.map((lm, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm text-slate-200">
-                      <MapPin className="w-4 h-4 text-[#8A4DE8] shrink-0" />
+                    <li key={idx} className="flex items-center gap-2 text-sm text-slate-800 font-medium">
+                      <MapPin className="w-4 h-4 text-[#6D2DBF] shrink-0" />
                       <span>{lm}</span>
                     </li>
                   ))}
@@ -161,44 +161,44 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
           </div>
 
           {/* Local Advantages */}
-          <div className="bg-[#131626] border border-white/10 rounded-3xl p-6 sm:p-8">
-            <h2 className="text-2xl font-bold font-sora text-white mb-6">
+          <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+            <h2 className="text-2xl font-bold font-sora text-slate-900 mb-6">
               Por que contratar o Seguro Loovi no bairro {bairro.name}?
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/5">
-                <h3 className="font-bold text-white text-base mb-1">Sem Bloqueio de Cartão</h3>
-                <p className="text-xs text-slate-300">Pagamento mensal recorrente direto no cartão sem prender seu limite total.</p>
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-base mb-1">Sem Bloqueio de Cartão</h3>
+                <p className="text-xs text-slate-600">Pagamento mensal recorrente direto no cartão sem prender seu limite total.</p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/5">
-                <h3 className="font-bold text-white text-base mb-1">100% FIPE para Uber e 99</h3>
-                <p className="text-xs text-slate-300">Garantia total para quem trabalha com aplicativo no {bairro.name}.</p>
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-base mb-1">100% FIPE para Uber e 99</h3>
+                <p className="text-xs text-slate-600">Garantia total para quem trabalha com aplicativo no {bairro.name}.</p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/5">
-                <h3 className="font-bold text-white text-base mb-1">Carros a partir de 1986</h3>
-                <p className="text-xs text-slate-300">Aceitação para carros seminovos, antigos, com leilão e rebaixados.</p>
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-base mb-1">Carros a partir de 1986</h3>
+                <p className="text-xs text-slate-600">Aceitação para carros seminovos, antigos, com leilão e rebaixados.</p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/5">
-                <h3 className="font-bold text-white text-base mb-1">Danos a Terceiros até R$ 100 mil</h3>
-                <p className="text-xs text-slate-300">Tranquilidade no trânsito caso haja colisão com outros automóveis.</p>
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-base mb-1">Danos a Terceiros até R$ 100 mil</h3>
+                <p className="text-xs text-slate-600">Tranquilidade no trânsito caso haja colisão com outros automóveis.</p>
               </div>
             </div>
           </div>
 
           {/* Local FAQs */}
-          <div className="bg-[#131626] border border-white/10 rounded-3xl p-6 sm:p-8">
-            <h2 className="text-2xl font-bold font-sora text-white mb-6 flex items-center gap-3">
-              <HelpCircle className="w-6 h-6 text-[#8A4DE8]" />
+          <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+            <h2 className="text-2xl font-bold font-sora text-slate-900 mb-6 flex items-center gap-3">
+              <HelpCircle className="w-6 h-6 text-[#6D2DBF]" />
               Perguntas Frequentes sobre o Seguro Loovi no {bairro.name}
             </h2>
             <div className="space-y-4">
               {bairro.faqs.map((faq, idx) => (
-                <div key={idx} className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                  <h3 className="font-bold text-white text-sm sm:text-base mb-2">{faq.q}</h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{faq.a}</p>
+                <div key={idx} className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                  <h3 className="font-bold text-slate-900 text-sm sm:text-base mb-2">{faq.q}</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">{faq.a}</p>
                 </div>
               ))}
             </div>
@@ -207,7 +207,7 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
 
         {/* Sidebar */}
         <div className="space-y-6">
-          <div className="bg-gradient-to-br from-[#6D2DBF] to-[#3F1568] p-6 rounded-3xl border border-white/20 text-white shadow-xl">
+          <div className="bg-gradient-to-br from-[#6D2DBF] to-[#481773] p-6 rounded-3xl border border-purple-200 text-white shadow-xl">
             <span className="text-xs font-bold uppercase tracking-wider text-[#2ED9A0] block mb-2">Atendimento Direto</span>
             <h3 className="text-xl font-extrabold font-sora mb-2">{CONSULTANT_INFO.name}</h3>
             <p className="text-xs text-slate-200 mb-6">{CONSULTANT_INFO.role} em Curitiba</p>
@@ -227,25 +227,25 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-3.5 rounded-xl bg-[#2ED9A0] text-[#0B0D17] font-extrabold text-sm text-center flex items-center justify-center gap-2 hover:bg-[#25B886] transition-all"
+              className="w-full py-3.5 rounded-xl bg-[#2ED9A0] text-slate-950 font-extrabold text-sm text-center flex items-center justify-center gap-2 hover:bg-[#25B886] transition-all shadow-md"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Simular Agora no WhatsApp</span>
             </a>
           </div>
 
-          <div className="bg-[#131626] p-6 rounded-3xl border border-white/10">
-            <h3 className="font-bold text-white text-base mb-4 flex items-center gap-2">
-              <FileText className="w-4 h-4 text-[#2ED9A0]" />
+          <div className="bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm">
+            <h3 className="font-bold text-slate-900 text-base mb-4 flex items-center gap-2">
+              <FileText className="w-4 h-4 text-[#00875A]" />
               <span>Outros Bairros Próximos</span>
             </h3>
             <div className="flex flex-wrap gap-2">
-              <button onClick={() => onNavigate('/bairro/agua-verde')} className="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs text-slate-300 transition-all">Água Verde</button>
-              <button onClick={() => onNavigate('/bairro/batel')} className="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs text-slate-300 transition-all">Batel</button>
-              <button onClick={() => onNavigate('/bairro/portao')} className="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs text-slate-300 transition-all">Portão</button>
-              <button onClick={() => onNavigate('/bairro/cabral')} className="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs text-slate-300 transition-all">Cabral</button>
-              <button onClick={() => onNavigate('/bairro/cidade-industrial-cic')} className="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs text-slate-300 transition-all">CIC</button>
-              <button onClick={() => onNavigate('/bairros-curitiba')} className="px-3 py-1.5 rounded-xl bg-[#2ED9A0]/20 text-[#2ED9A0] font-bold text-xs hover:bg-[#2ED9A0]/30 transition-all">Ver Todos (75 Bairros) →</button>
+              <button onClick={() => onNavigate('/bairro/agua-verde')} className="px-3 py-1.5 rounded-xl bg-white hover:bg-slate-100 text-xs font-semibold text-slate-700 border border-slate-200 transition-all">Água Verde</button>
+              <button onClick={() => onNavigate('/bairro/batel')} className="px-3 py-1.5 rounded-xl bg-white hover:bg-slate-100 text-xs font-semibold text-slate-700 border border-slate-200 transition-all">Batel</button>
+              <button onClick={() => onNavigate('/bairro/portao')} className="px-3 py-1.5 rounded-xl bg-white hover:bg-slate-100 text-xs font-semibold text-slate-700 border border-slate-200 transition-all">Portão</button>
+              <button onClick={() => onNavigate('/bairro/cabral')} className="px-3 py-1.5 rounded-xl bg-white hover:bg-slate-100 text-xs font-semibold text-slate-700 border border-slate-200 transition-all">Cabral</button>
+              <button onClick={() => onNavigate('/bairro/cidade-industrial-cic')} className="px-3 py-1.5 rounded-xl bg-white hover:bg-slate-100 text-xs font-semibold text-slate-700 border border-slate-200 transition-all">CIC</button>
+              <button onClick={() => onNavigate('/bairros-curitiba')} className="px-3 py-1.5 rounded-xl bg-[#2ED9A0]/20 text-[#00875A] font-bold text-xs hover:bg-[#2ED9A0]/30 transition-all">Ver Todos (75 Bairros) →</button>
             </div>
           </div>
         </div>
@@ -260,7 +260,7 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
       </div>
 
       {/* Interactive Quiz / Cotacao */}
-      <section className="py-12 bg-[#0B0D17]">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <QuizCotacao />
         </div>
