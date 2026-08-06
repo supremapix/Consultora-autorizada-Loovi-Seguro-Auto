@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CidadeInfo } from '../data/cidadesData';
-import { CONSULTANT_INFO, OFFICIAL_ADHESION_LINK } from '../constants';
+import { CONSULTANT_INFO } from '../constants';
 import { getInsuranceAgencySchema, getBreadcrumbSchema, getFaqSchema, getServiceSchema } from '../data/seoSchemas';
 import { MapPin, Phone, MessageCircle, Clock, ShieldCheck, ArrowRight, HelpCircle, Navigation, CheckCircle2 } from 'lucide-react';
 import { QuizCotacao } from './QuizCotacao';
@@ -101,16 +101,6 @@ export const CidadeDetail: React.FC<Props> = ({ cidade, onNavigate }) => {
             >
               <MessageCircle className="w-5 h-5" />
               <span>Simular Seguro em {cidade.name} via WhatsApp</span>
-            </a>
-
-            <a
-              href={OFFICIAL_ADHESION_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-bold text-base transition-all flex items-center justify-center gap-3 border border-white/30 backdrop-blur-sm"
-            >
-              <span>Contratar Online Direct</span>
-              <ArrowRight className="w-5 h-5" />
             </a>
           </div>
         </div>

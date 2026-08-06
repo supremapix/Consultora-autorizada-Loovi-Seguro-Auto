@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { CheckCircle2, ChevronDown } from 'lucide-react';
-import { COVERAGES, OFFICIAL_ADHESION_LINK } from '../constants';
+import { CheckCircle2, ChevronDown, MessageCircle } from 'lucide-react';
+import { COVERAGES } from '../constants';
 
 export function CoveragesSection() {
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({
@@ -70,12 +70,11 @@ export function CoveragesSection() {
         {/* CTA Banner */}
         <div className="mt-12 text-center">
           <a
-            href={OFFICIAL_ADHESION_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#simular"
             className="btn-primary inline-flex items-center gap-2 text-[16px]"
           >
-            Contratar agora
+            <MessageCircle className="w-5 h-5 text-[#2ED9A0]" />
+            Simular no WhatsApp
           </a>
         </div>
       </div>

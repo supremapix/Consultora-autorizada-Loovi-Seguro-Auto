@@ -10,7 +10,7 @@ import {
   Lock,
   FileText,
 } from 'lucide-react';
-import { CONSULTANT_INFO, OFFICIAL_ADHESION_LINK } from '../constants';
+import { CONSULTANT_INFO } from '../constants';
 import { QuizData } from '../types';
 
 const INITIAL_QUIZ: QuizData = {
@@ -546,7 +546,7 @@ Prazo: ${quizData.timeline}`;
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 max-w-md mx-auto">
+              <div className="flex flex-col items-center justify-center gap-4 pt-4 max-w-md mx-auto">
                 <a
                   href={generateWhatsappUrl()}
                   target="_blank"
@@ -555,16 +555,6 @@ Prazo: ${quizData.timeline}`;
                 >
                   <MessageCircle className="w-6 h-6" />
                   Enviar para Bárbara no WhatsApp
-                </a>
-
-                <a
-                  href={OFFICIAL_ADHESION_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full px-6 py-4 rounded-2xl bg-[#6D2DBF] hover:bg-[#3F1568] text-white font-sora font-bold text-sm transition-all flex items-center justify-center gap-2"
-                >
-                  <span>Contratar no site oficial</span>
-                  <ExternalLink className="w-4 h-4 text-white" />
                 </a>
               </div>
 

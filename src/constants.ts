@@ -1,5 +1,3 @@
-export const OFFICIAL_ADHESION_LINK = "https://loovi.com.br/Kx7a8mCQZReLE-2Jm3nwFA/Q0FUX0FERVNBT185OQ==?utm_source=escvir&utm_medium=meusite";
-
 export const CONSULTANT_INFO = {
   name: "Barbara Hanna Alves Duraes",
   shortName: "Barbara Duraes",

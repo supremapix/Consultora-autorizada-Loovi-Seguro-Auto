@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowRight, Car } from 'lucide-react';
-import { OFFICIAL_ADHESION_LINK } from '../constants';
+import { ArrowRight, Car, MessageCircle } from 'lucide-react';
 
 export function Hero() {
   const handleScrollToSimular = (e: React.MouseEvent) => {
@@ -56,21 +55,13 @@ export function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <a
-                href={OFFICIAL_ADHESION_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#481773] font-semibold text-[16px] shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-3"
-              >
-                Cotar 100% online
-                <ArrowRight className="w-5 h-5" />
-              </a>
-
-              <a
                 href="#simular"
                 onClick={handleScrollToSimular}
-                className="w-full sm:w-auto px-8 py-4 rounded-full border-[1.5px] border-white text-white font-semibold text-[16px] hover:bg-white/10 transition-all flex items-center justify-center"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#481773] font-semibold text-[16px] shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-3"
               >
+                <MessageCircle className="w-5 h-5 text-[#2ED9A0]" />
                 Simular no WhatsApp
+                <ArrowRight className="w-5 h-5" />
               </a>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BairroInfo } from '../data/bairrosData';
-import { CONSULTANT_INFO, OFFICIAL_ADHESION_LINK } from '../constants';
+import { CONSULTANT_INFO } from '../constants';
 import { getInsuranceAgencySchema, getBreadcrumbSchema, getFaqSchema, getServiceSchema } from '../data/seoSchemas';
 import { ShieldCheck, MapPin, Phone, MessageCircle, Clock, Navigation, CheckCircle2, ArrowRight, Car, HelpCircle, FileText } from 'lucide-react';
 import { QuizCotacao } from './QuizCotacao';
@@ -106,16 +106,6 @@ export const BairroDetail: React.FC<Props> = ({ bairro, onNavigate }) => {
             >
               <MessageCircle className="w-5 h-5" />
               <span>Cotar via WhatsApp em {bairro.name}</span>
-            </a>
-
-            <a
-              href={OFFICIAL_ADHESION_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-bold text-base transition-all flex items-center justify-center gap-3 border border-white/30 backdrop-blur-sm"
-            >
-              <span>Contratar Direto Online</span>
-              <ArrowRight className="w-5 h-5" />
             </a>
           </div>
         </div>

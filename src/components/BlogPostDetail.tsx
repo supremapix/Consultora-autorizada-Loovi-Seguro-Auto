@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BlogPost } from '../data/blogData';
-import { CONSULTANT_INFO, OFFICIAL_ADHESION_LINK } from '../constants';
+import { CONSULTANT_INFO } from '../constants';
 import { getArticleSchema, getBreadcrumbSchema } from '../data/seoSchemas';
 import { Clock, UserCheck, Calendar, ArrowLeft, MessageCircle, ArrowRight } from 'lucide-react';
 import { HomeImagesShowcase } from './HomeImagesShowcase';
@@ -109,16 +109,6 @@ export const BlogPostDetail: React.FC<Props> = ({ post, onNavigate }) => {
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Cotar Agora no WhatsApp</span>
-              </a>
-
-              <a
-                href={OFFICIAL_ADHESION_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3.5 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-bold text-sm text-center flex items-center justify-center gap-2 border border-white/30 backdrop-blur-sm transition-all"
-              >
-                <span>Contratar Direto Online</span>
-                <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </div>

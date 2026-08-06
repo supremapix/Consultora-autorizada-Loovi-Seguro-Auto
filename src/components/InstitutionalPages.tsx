@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CONSULTANT_INFO, LOOVI_CHANNELS, COVERAGES, FAQ_ITEMS, OFFICIAL_ADHESION_LINK } from '../constants';
+import { CONSULTANT_INFO, LOOVI_CHANNELS, COVERAGES, FAQ_ITEMS } from '../constants';
 import { ShieldCheck, Phone, Mail, MapPin, CheckCircle2, MessageCircle, HelpCircle, FileText, ArrowRight } from 'lucide-react';
 import { QuizCotacao } from './QuizCotacao';
 import { HomeImagesShowcase } from './HomeImagesShowcase';
